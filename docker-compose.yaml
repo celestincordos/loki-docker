@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  loki:
+    image: grafana/loki:3.0.0
+    network_mode: host
+    volumes:
+      - /mnt/Storage/Storage/Apps/Loki:/loki
+      - ./config.yaml:/etc/loki/local-config.yaml
+    command: -config.file=/etc/loki/local-config.yaml
+    restart: unless-stopped
