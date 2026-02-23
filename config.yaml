@@ -27,6 +27,7 @@ schema_config:
 
 limits_config:
   max_line_size: 2MB
+  retention_period: 90d
 
 ruler:
   alertmanager_url: http://localhost:9093
